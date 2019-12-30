@@ -1,0 +1,60 @@
+  427  wget https://cyberskyline.com/artifact/5c9f80b797e79425f51dc350/5d5ea6d58062a3415d1f582f/58769cea18592673927ced7a/5877112918592673927cfc25/59dafe1c8a94a02630485270/download?t=606
+  428  ls
+  429  rm download\?t\=606 
+  430  wget https://cyberskyline.com/artifact/5c9f80b797e79425f51dc350/5d5ea6d58062a3415d1f582f/58769cea18592673927ced7a/58770a8c18592673927cf9dd/58770b8318592673927cf9f7/download?t=606
+  431  mv download\?t\=606 LogNginx/access.log
+  432  cd LogNginx/
+  433  ls
+  434  less access.log 
+  435  clear
+  436  awk '{ print $1 }'
+  437  awk '{ print $1 }' access.log 
+  438  awk '{ print $1 }' access.log | uniq
+  439  man uniq
+  440  awk '{ print $1 }' access.log | uniq -u
+  441  awk '{ print $1 }' access.log | uniq -u | wc
+  442  man wc
+  443  awk '{ print $1 }' access.log | uniq -u | wc -l
+  444  cat access.log | cut -d " " -f 1 | sort | uniq -c | wc -l
+  445  awk '{ print $1 }' access.log | sort | uniq -c | wc -l
+  446  man uniq
+  447  awk '{ print $1 }' access.log | sort | uniq -cu | wc -l
+  448  awk '{ print $1 }' access.log | sort | uniq -c | wc -l
+  449  awk '($9 ~ /200/)' access.log | awk '{print $7}' | sort | uniq -c | sort -r
+  450  awk '($9 ~ /400/)' access.log | awk '{print $7}' | sort | uniq -c | sort -r
+  451  cat access.log | cut-d '"' -f3 | cut -d ' ' -f2 | sort | uniq -c | sort -rn
+  452  cat access.log | cut -d '"' -f3 | cut -d ' ' -f2 | sort | uniq -c | sort -rn
+  453  cat access.log | grep ring
+  454  cat access.log | grep -i ring
+  455  cat access.log | grep -i google
+  456  cat access.log | grep cgi
+  457  cat access.log | grep -i cgi
+  458  cat access.log | grep env
+  459  cat access.log | grep bash
+  460  cat access.log | grep fire
+  461  cat access.log | grep -i fire
+  462  cat access.log | grep -i | awk '{ print $6 }'
+  463  cat access.log | grep -i fire | awk '{ print $6 }'
+  464  cat access.log | grep -i fire | awk '{ print $9 }'
+  465  cat access.log | grep -i fire | awk '{ print $11 }'
+  466  cat access.log | grep -i fire | awk '{ print $17 }'
+  467  cat access.log | grep -i fire | awk '{ print $18 }'
+  468  cat access.log | grep -i fire | awk '{ print $17 }'
+  469  cat access.log | grep -i fire | awk '{ print $14 }'
+  470  cat access.log | grep -i fire | awk '{ print $10 }'
+  471  cat access.log | grep -i fire | awk '{ print $12 }'
+  472  cat access.log | grep -i fire | awk '{ print $9 }'
+  473  cat access.log | grep -i fire | awk '{ print $8 }'
+  474  cat access.log | grep -i fire | awk '{ print $7 }'
+  475  cat access.log | awk '{ print $6 }'
+  476  cat access.log | awk '{ print $6 }' | uniq -c
+  477  cat access.log | awk '{ print $6 }' | sort | uniq -c
+  478  history
+  479  nano history
+  480  clear
+  481  history man
+  482  man history
+  483  history[50]
+  484  history 50
+  485  history 60
+  486  history 60 > answers.txt

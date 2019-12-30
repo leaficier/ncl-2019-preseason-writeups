@@ -1,0 +1,288 @@
+Script started on 2019-10-16 09:18:04-0500
+]0;nick@W1643014: /mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[01;32mnick@W1643014[00m:[01;34m/mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[00m$ exitgrep "192.168.0.224" squid_access.log cat squid_access.log | awk '{print $6}' | sort | uniq -c[18Pgrep "192.168.0.224" squid_access.log exit[K[Kg[Kgrep -v FAIL vsftpd.log | grep -v CONNECT | head
+Mon Mar 20 17:46:16 2017 [pid 29740] [polimer] OK LOGIN: Client "94.25.62.32"
+Mon Mar 20 17:46:42 2017 [pid 29769] [polimer] OK DOWNLOAD: Client "94.25.62.32", "/modules/gallery/templates_user/template_user.html", 4356 bytes, 29.33Kbyte/sec
+Mon Mar 20 17:47:45 2017 [pid 29769] [polimer] OK DOWNLOAD: Client "94.25.62.32", "/modules/gallery/gallery.class.php", 52722 bytes, 36.81Kbyte/sec
+Tue Mar 21 21:21:31 2017 [pid 7816] [polimer] OK LOGIN: Client "5.138.42.134"
+Tue Mar 21 21:23:27 2017 [pid 7818] [polimer] OK DOWNLOAD: Client "5.138.42.134", "/santa3.15.zip", 6583053 bytes, 993.96Kbyte/sec
+Tue Mar 21 21:27:02 2017 [pid 7818] [polimer] OK DOWNLOAD: Client "5.138.42.134", "/design/template1.html", 2838 bytes, 29.30Kbyte/sec
+Tue Mar 21 21:27:45 2017 [pid 7818] [polimer] OK UPLOAD: Client "5.138.42.134", "/design/template1.html", 2270 bytes, 13.15Kbyte/sec
+Tue Mar 21 21:27:56 2017 [pid 7818] [polimer] OK DOWNLOAD: Client "5.138.42.134", "/design/template1.html", 2270 bytes, 20.36Kbyte/sec
+Tue Mar 21 21:28:06 2017 [pid 7818] [polimer] OK UPLOAD: Client "5.138.42.134", "/design/template1.html", 2382 bytes, 11.96Kbyte/sec
+Tue Mar 21 21:30:18 2017 [pid 7818] [polimer] OK DOWNLOAD: Client "5.138.42.134", "/design/template1.html", 2382 bytes, 23.25Kbyte/sec
+]0;nick@W1643014: /mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[01;32mnick@W1643014[00m:[01;34m/mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[00m$ 
+]0;nick@W1643014: /mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[01;32mnick@W1643014[00m:[01;34m/mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[00m$ grept[K -i ok vsftpd.log | wc[K[Kwc
+    139    1832   13990
+]0;nick@W1643014: /mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[01;32mnick@W1643014[00m:[01;34m/mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[00m$ grep -i ok vsftpd.log | wc -l
+139
+]0;nick@W1643014: /mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[01;32mnick@W1643014[00m:[01;34m/mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[00m$ grep -i ok vsftpd.log | wc -l[K[K[K[K[K[K[K
+Sun Mar 19 05:03:01 2017 [pid 6156] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "198.1.81.189"
+Mon Mar 20 00:27:44 2017 [pid 8393] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "195.64.158.177"
+Mon Mar 20 17:46:16 2017 [pid 29740] [polimer] [01;31m[KOK[m[K LOGIN: Client "94.25.62.32"
+Mon Mar 20 17:46:42 2017 [pid 29769] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "94.25.62.32", "/modules/gallery/templates_user/template_user.html", 4356 bytes, 29.33Kbyte/sec
+Mon Mar 20 17:47:45 2017 [pid 29769] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "94.25.62.32", "/modules/gallery/gallery.class.php", 52722 bytes, 36.81Kbyte/sec
+Tue Mar 21 21:21:31 2017 [pid 7816] [polimer] [01;31m[KOK[m[K LOGIN: Client "5.138.42.134"
+Tue Mar 21 21:23:27 2017 [pid 7818] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/santa3.15.zip", 6583053 bytes, 993.96Kbyte/sec
+Tue Mar 21 21:27:02 2017 [pid 7818] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/design/template1.html", 2838 bytes, 29.30Kbyte/sec
+Tue Mar 21 21:27:45 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/template1.html", 2270 bytes, 13.15Kbyte/sec
+Tue Mar 21 21:27:56 2017 [pid 7818] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/design/template1.html", 2270 bytes, 20.36Kbyte/sec
+Tue Mar 21 21:28:06 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/template1.html", 2382 bytes, 11.96Kbyte/sec
+Tue Mar 21 21:30:18 2017 [pid 7818] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/design/template1.html", 2382 bytes, 23.25Kbyte/sec
+Tue Mar 21 21:30:28 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/template1.html", 2471 bytes, 1.65Kbyte/sec
+Tue Mar 21 21:30:49 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/scripts/functions.js", 1569 bytes, 8.65Kbyte/sec
+Tue Mar 21 21:30:51 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/scripts/hyphenator.js", 60825 bytes, 43.62Kbyte/sec
+Tue Mar 21 21:30:52 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/scripts/jquery.fancybox.pack.js", 23135 bytes, 56.55Kbyte/sec
+Tue Mar 21 21:30:52 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/scripts/niftycube.js", 8918 bytes, 31.48Kbyte/sec
+Tue Mar 21 21:30:56 2017 [pid 7818] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/design/template1.html", 2471 bytes, 22.65Kbyte/sec
+Tue Mar 21 21:31:06 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/template1.html", 2383 bytes, 12.53Kbyte/sec
+Tue Mar 21 21:32:50 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/styles/jquery.fancybox.css", 5001 bytes, 19.47Kbyte/sec
+Tue Mar 21 21:32:51 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/styles/jquery.fancybox.min.css", 3715 bytes, 16.31Kbyte/sec
+Tue Mar 21 21:33:10 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/images/bullet-bottom.gif", 278 bytes, 1.74Kbyte/sec
+Tue Mar 21 21:33:10 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/images/bullet-left.gif", 155 bytes, 0.99Kbyte/sec
+Tue Mar 21 21:33:11 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/images/close.png", 1996 bytes, 11.82Kbyte/sec
+Tue Mar 21 21:33:18 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/images/h80.png", 480 bytes, 0.07Kbyte/sec
+Tue Mar 21 21:33:19 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/images/loading.gif", 9427 bytes, 28.55Kbyte/sec
+Tue Mar 21 21:33:20 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/images/search.gif", 101 bytes, 0.60Kbyte/sec
+Tue Mar 21 21:33:20 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/images/submit.png", 445 bytes, 2.50Kbyte/sec
+Tue Mar 21 21:41:09 2017 [pid 10759] [polimer] [01;31m[KOK[m[K LOGIN: Client "5.138.42.134"
+Tue Mar 21 21:41:13 2017 [pid 10761] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/design/template1.html", 2383 bytes, 23.32Kbyte/sec
+Tue Mar 21 21:43:14 2017 [pid 10761] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/design/template1.html", 2383 bytes, 24.64Kbyte/sec
+Tue Mar 21 21:43:34 2017 [pid 10761] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/template1.html", 2382 bytes, 14.11Kbyte/sec
+Tue Mar 21 21:43:48 2017 [pid 10761] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4302 bytes, 42.63Kbyte/sec
+Tue Mar 21 21:46:54 2017 [pid 10761] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4449 bytes, 20.48Kbyte/sec
+Tue Mar 21 21:49:34 2017 [pid 10761] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4449 bytes, 44.22Kbyte/sec
+Tue Mar 21 21:50:38 2017 [pid 10761] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4424 bytes, 20.51Kbyte/sec
+Tue Mar 21 21:53:24 2017 [pid 10761] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4424 bytes, 44.66Kbyte/sec
+Tue Mar 21 21:53:40 2017 [pid 10761] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4439 bytes, 6.20Kbyte/sec
+Tue Mar 21 21:53:53 2017 [pid 10761] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4439 bytes, 45.80Kbyte/sec
+Tue Mar 21 21:54:02 2017 [pid 10761] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4439 bytes, 20.63Kbyte/sec
+Tue Mar 21 21:55:05 2017 [pid 10761] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4439 bytes, 44.12Kbyte/sec
+Tue Mar 21 21:55:49 2017 [pid 10761] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4442 bytes, 20.31Kbyte/sec
+Tue Mar 21 21:58:13 2017 [pid 10761] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4442 bytes, 44.47Kbyte/sec
+Tue Mar 21 21:58:57 2017 [pid 10761] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4475 bytes, 20.80Kbyte/sec
+Tue Mar 21 21:59:08 2017 [pid 10761] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/design/styles/style.css", 24413 bytes, 149.55Kbyte/sec
+Tue Mar 21 22:00:38 2017 [pid 10761] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/styles/style.css", 24571 bytes, 56.33Kbyte/sec
+Thu Mar 23 20:55:52 2017 [pid 8088] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:55:56 2017 [pid 8128] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:56:00 2017 [pid 8151] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:56:03 2017 [pid 8156] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:56:06 2017 [pid 8170] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:56:23 2017 [pid 8182] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:56:27 2017 [pid 8204] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:56:30 2017 [pid 8209] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:56:33 2017 [pid 8212] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:56:36 2017 [pid 8217] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:56:40 2017 [pid 8219] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:56:44 2017 [pid 8221] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:56:48 2017 [pid 8226] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:56:52 2017 [pid 8231] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:56:55 2017 [pid 8233] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:57:05 2017 [pid 8245] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:57:08 2017 [pid 8248] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:57:12 2017 [pid 8250] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:57:15 2017 [pid 8255] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:57:18 2017 [pid 8257] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:57:22 2017 [pid 8262] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:57:26 2017 [pid 8266] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:57:30 2017 [pid 8274] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:57:33 2017 [pid 8281] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:57:49 2017 [pid 8294] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:57:53 2017 [pid 8299] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:57:56 2017 [pid 8301] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:58:00 2017 [pid 8303] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:58:03 2017 [pid 8314] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:58:05 2017 [pid 8317] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:58:09 2017 [pid 8320] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:58:12 2017 [pid 8334] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:58:15 2017 [pid 8337] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:58:18 2017 [pid 8344] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:58:22 2017 [pid 8346] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:58:30 2017 [pid 8360] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:58:33 2017 [pid 8368] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:58:36 2017 [pid 8374] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:58:39 2017 [pid 8382] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:58:42 2017 [pid 8387] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:58:45 2017 [pid 8398] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:58:49 2017 [pid 8403] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:58:52 2017 [pid 8413] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:58:54 2017 [pid 8420] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:58:58 2017 [pid 8428] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:59:01 2017 [pid 8433] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:59:19 2017 [pid 8446] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:59:22 2017 [pid 8461] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:59:25 2017 [pid 8463] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:59:28 2017 [pid 8465] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:59:31 2017 [pid 8477] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:59:35 2017 [pid 8485] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:59:38 2017 [pid 8491] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:59:41 2017 [pid 8494] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:59:44 2017 [pid 8496] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:59:48 2017 [pid 8505] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:59:50 2017 [pid 8508] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:59:53 2017 [pid 8512] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 20:59:57 2017 [pid 8517] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:00:08 2017 [pid 8607] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:00:12 2017 [pid 8772] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:00:15 2017 [pid 8947] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:00:18 2017 [pid 8965] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:00:21 2017 [pid 8967] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:00:24 2017 [pid 8969] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:00:27 2017 [pid 8971] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:00:33 2017 [pid 8982] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:00:35 2017 [pid 8987] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:00:44 2017 [pid 8992] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:00:47 2017 [pid 8994] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:00:51 2017 [pid 9006] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:00:54 2017 [pid 9011] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:00:57 2017 [pid 9013] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:01:00 2017 [pid 9015] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:01:04 2017 [pid 9029] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:01:07 2017 [pid 9036] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:01:10 2017 [pid 9039] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:01:13 2017 [pid 9042] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:01:17 2017 [pid 9051] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:01:20 2017 [pid 9059] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:01:24 2017 [pid 9068] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:01:34 2017 [pid 9073] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:01:37 2017 [pid 9082] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:01:40 2017 [pid 9085] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:01:44 2017 [pid 9087] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:01:49 2017 [pid 9090] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:01:52 2017 [pid 9095] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:01:56 2017 [pid 9097] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:01:59 2017 [pid 9104] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:02:03 2017 [pid 9107] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:02:15 2017 [pid 9118] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:02:18 2017 [pid 9120] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+Thu Mar 23 21:02:22 2017 [pid 9125] [[01;31m[Kok[m[Kn[01;31m[Kok[m[Komf] FAIL LOGIN: Client "46.246.89.153"
+]0;nick@W1643014: /mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[01;32mnick@W1643014[00m:[01;34m/mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[00m$ grep -i ok vsftpd.log [1P[1P[1P[1P[1P[1@"[1@O[1@K[1@"
+Mon Mar 20 17:46:16 2017 [pid 29740] [polimer] [01;31m[KOK[m[K LOGIN: Client "94.25.62.32"
+Mon Mar 20 17:46:42 2017 [pid 29769] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "94.25.62.32", "/modules/gallery/templates_user/template_user.html", 4356 bytes, 29.33Kbyte/sec
+Mon Mar 20 17:47:45 2017 [pid 29769] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "94.25.62.32", "/modules/gallery/gallery.class.php", 52722 bytes, 36.81Kbyte/sec
+Tue Mar 21 21:21:31 2017 [pid 7816] [polimer] [01;31m[KOK[m[K LOGIN: Client "5.138.42.134"
+Tue Mar 21 21:23:27 2017 [pid 7818] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/santa3.15.zip", 6583053 bytes, 993.96Kbyte/sec
+Tue Mar 21 21:27:02 2017 [pid 7818] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/design/template1.html", 2838 bytes, 29.30Kbyte/sec
+Tue Mar 21 21:27:45 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/template1.html", 2270 bytes, 13.15Kbyte/sec
+Tue Mar 21 21:27:56 2017 [pid 7818] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/design/template1.html", 2270 bytes, 20.36Kbyte/sec
+Tue Mar 21 21:28:06 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/template1.html", 2382 bytes, 11.96Kbyte/sec
+Tue Mar 21 21:30:18 2017 [pid 7818] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/design/template1.html", 2382 bytes, 23.25Kbyte/sec
+Tue Mar 21 21:30:28 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/template1.html", 2471 bytes, 1.65Kbyte/sec
+Tue Mar 21 21:30:49 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/scripts/functions.js", 1569 bytes, 8.65Kbyte/sec
+Tue Mar 21 21:30:51 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/scripts/hyphenator.js", 60825 bytes, 43.62Kbyte/sec
+Tue Mar 21 21:30:52 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/scripts/jquery.fancybox.pack.js", 23135 bytes, 56.55Kbyte/sec
+Tue Mar 21 21:30:52 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/scripts/niftycube.js", 8918 bytes, 31.48Kbyte/sec
+Tue Mar 21 21:30:56 2017 [pid 7818] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/design/template1.html", 2471 bytes, 22.65Kbyte/sec
+Tue Mar 21 21:31:06 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/template1.html", 2383 bytes, 12.53Kbyte/sec
+Tue Mar 21 21:32:50 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/styles/jquery.fancybox.css", 5001 bytes, 19.47Kbyte/sec
+Tue Mar 21 21:32:51 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/styles/jquery.fancybox.min.css", 3715 bytes, 16.31Kbyte/sec
+Tue Mar 21 21:33:10 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/images/bullet-bottom.gif", 278 bytes, 1.74Kbyte/sec
+Tue Mar 21 21:33:10 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/images/bullet-left.gif", 155 bytes, 0.99Kbyte/sec
+Tue Mar 21 21:33:11 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/images/close.png", 1996 bytes, 11.82Kbyte/sec
+Tue Mar 21 21:33:18 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/images/h80.png", 480 bytes, 0.07Kbyte/sec
+Tue Mar 21 21:33:19 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/images/loading.gif", 9427 bytes, 28.55Kbyte/sec
+Tue Mar 21 21:33:20 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/images/search.gif", 101 bytes, 0.60Kbyte/sec
+Tue Mar 21 21:33:20 2017 [pid 7818] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/images/submit.png", 445 bytes, 2.50Kbyte/sec
+Tue Mar 21 21:41:09 2017 [pid 10759] [polimer] [01;31m[KOK[m[K LOGIN: Client "5.138.42.134"
+Tue Mar 21 21:41:13 2017 [pid 10761] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/design/template1.html", 2383 bytes, 23.32Kbyte/sec
+Tue Mar 21 21:43:14 2017 [pid 10761] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/design/template1.html", 2383 bytes, 24.64Kbyte/sec
+Tue Mar 21 21:43:34 2017 [pid 10761] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/template1.html", 2382 bytes, 14.11Kbyte/sec
+Tue Mar 21 21:43:48 2017 [pid 10761] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4302 bytes, 42.63Kbyte/sec
+Tue Mar 21 21:46:54 2017 [pid 10761] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4449 bytes, 20.48Kbyte/sec
+Tue Mar 21 21:49:34 2017 [pid 10761] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4449 bytes, 44.22Kbyte/sec
+Tue Mar 21 21:50:38 2017 [pid 10761] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4424 bytes, 20.51Kbyte/sec
+Tue Mar 21 21:53:24 2017 [pid 10761] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4424 bytes, 44.66Kbyte/sec
+Tue Mar 21 21:53:40 2017 [pid 10761] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4439 bytes, 6.20Kbyte/sec
+Tue Mar 21 21:53:53 2017 [pid 10761] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4439 bytes, 45.80Kbyte/sec
+Tue Mar 21 21:54:02 2017 [pid 10761] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4439 bytes, 20.63Kbyte/sec
+Tue Mar 21 21:55:05 2017 [pid 10761] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4439 bytes, 44.12Kbyte/sec
+Tue Mar 21 21:55:49 2017 [pid 10761] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4442 bytes, 20.31Kbyte/sec
+Tue Mar 21 21:58:13 2017 [pid 10761] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4442 bytes, 44.47Kbyte/sec
+Tue Mar 21 21:58:57 2017 [pid 10761] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4475 bytes, 20.80Kbyte/sec
+Tue Mar 21 21:59:08 2017 [pid 10761] [polimer] [01;31m[KOK[m[K DOWNLOAD: Client "5.138.42.134", "/design/styles/style.css", 24413 bytes, 149.55Kbyte/sec
+Tue Mar 21 22:00:38 2017 [pid 10761] [polimer] [01;31m[KOK[m[K UPLOAD: Client "5.138.42.134", "/design/styles/style.css", 24571 bytes, 56.33Kbyte/sec
+]0;nick@W1643014: /mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[01;32mnick@W1643014[00m:[01;34m/mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[00m$ grep "OK" vsftpd.log  | wc -[C[1@|[1@ [1@g[1@r[1@e[1@p[1@ [1@l[1@o[1P[1P[1@0[1P[1@-[1@i[1@ [1@l[1@o[1@g[1@i[1@n[1@ [C[C[C[C[C[Cl
+3
+]0;nick@W1643014: /mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[01;32mnick@W1643014[00m:[01;34m/mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[00m$ grep "OK" vsftpd.log  | grep -i login | wc -l[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K-i up[K[K[K[K[KUPLOAD [1@"[C[C[C[C[C[C[C" [C v sftpd.log 
+Tue Mar 21 21:27:45 2017 [pid 7818] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/design/template1.html", 2270 bytes, 13.15Kbyte/sec
+Tue Mar 21 21:28:06 2017 [pid 7818] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/design/template1.html", 2382 bytes, 11.96Kbyte/sec
+Tue Mar 21 21:30:28 2017 [pid 7818] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/design/template1.html", 2471 bytes, 1.65Kbyte/sec
+Tue Mar 21 21:30:49 2017 [pid 7818] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/design/scripts/functions.js", 1569 bytes, 8.65Kbyte/sec
+Tue Mar 21 21:30:51 2017 [pid 7818] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/design/scripts/hyphenator.js", 60825 bytes, 43.62Kbyte/sec
+Tue Mar 21 21:30:52 2017 [pid 7818] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/design/scripts/jquery.fancybox.pack.js", 23135 bytes, 56.55Kbyte/sec
+Tue Mar 21 21:30:52 2017 [pid 7818] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/design/scripts/niftycube.js", 8918 bytes, 31.48Kbyte/sec
+Tue Mar 21 21:31:06 2017 [pid 7818] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/design/template1.html", 2383 bytes, 12.53Kbyte/sec
+Tue Mar 21 21:32:50 2017 [pid 7818] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/design/styles/jquery.fancybox.css", 5001 bytes, 19.47Kbyte/sec
+Tue Mar 21 21:32:51 2017 [pid 7818] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/design/styles/jquery.fancybox.min.css", 3715 bytes, 16.31Kbyte/sec
+Tue Mar 21 21:33:10 2017 [pid 7818] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/design/images/bullet-bottom.gif", 278 bytes, 1.74Kbyte/sec
+Tue Mar 21 21:33:10 2017 [pid 7818] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/design/images/bullet-left.gif", 155 bytes, 0.99Kbyte/sec
+Tue Mar 21 21:33:11 2017 [pid 7818] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/design/images/close.png", 1996 bytes, 11.82Kbyte/sec
+Tue Mar 21 21:33:18 2017 [pid 7818] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/design/images/h80.png", 480 bytes, 0.07Kbyte/sec
+Tue Mar 21 21:33:19 2017 [pid 7818] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/design/images/loading.gif", 9427 bytes, 28.55Kbyte/sec
+Tue Mar 21 21:33:20 2017 [pid 7818] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/design/images/search.gif", 101 bytes, 0.60Kbyte/sec
+Tue Mar 21 21:33:20 2017 [pid 7818] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/design/images/submit.png", 445 bytes, 2.50Kbyte/sec
+Tue Mar 21 21:43:34 2017 [pid 10761] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/design/template1.html", 2382 bytes, 14.11Kbyte/sec
+Tue Mar 21 21:46:54 2017 [pid 10761] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4449 bytes, 20.48Kbyte/sec
+Tue Mar 21 21:50:38 2017 [pid 10761] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4424 bytes, 20.51Kbyte/sec
+Tue Mar 21 21:53:40 2017 [pid 10761] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4439 bytes, 6.20Kbyte/sec
+Tue Mar 21 21:54:02 2017 [pid 10761] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4439 bytes, 20.63Kbyte/sec
+Tue Mar 21 21:55:49 2017 [pid 10761] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4442 bytes, 20.31Kbyte/sec
+Tue Mar 21 21:58:57 2017 [pid 10761] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/modules/gallery/templates_user/template_user.html", 4475 bytes, 20.80Kbyte/sec
+Tue Mar 21 22:00:38 2017 [pid 10761] [polimer] OK [01;31m[KUPLOAD[m[K: Client "5.138.42.134", "/design/styles/style.css", 24571 bytes, 56.33Kbyte/sec
+]0;nick@W1643014: /mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[01;32mnick@W1643014[00m:[01;34m/mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[00m$ grep "UPLOAD" vsftpd.log | wc -l
+25
+]0;nick@W1643014: /mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[01;32mnick@W1643014[00m:[01;34m/mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[00m$ grep "UPLOAD" vsftpd.log | wc -l[1P[1P[1P[1P[1P[1P[1@D[1@O[1@W[1@N[1@L[1@O[1@A[1@D[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K| awk '{p[K print $13 '[K][K}'
+"/modules/gallery/templates_user/template_user.html",
+"/modules/gallery/gallery.class.php",
+"/santa3.15.zip",
+"/design/template1.html",
+"/design/template1.html",
+"/design/template1.html",
+"/design/template1.html",
+"/design/template1.html",
+"/design/template1.html",
+"/modules/gallery/templates_user/template_user.html",
+"/modules/gallery/templates_user/template_user.html",
+"/modules/gallery/templates_user/template_user.html",
+"/modules/gallery/templates_user/template_user.html",
+"/modules/gallery/templates_user/template_user.html",
+"/modules/gallery/templates_user/template_user.html",
+"/design/styles/style.css",
+]0;nick@W1643014: /mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[01;32mnick@W1643014[00m:[01;34m/mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[00m$ grep "DOWNLOAD" vsftpd.log | awk '{ print $13 }'[C[1P }'4 }'
+4356
+52722
+6583053
+2838
+2270
+2382
+2471
+2383
+2383
+4302
+4449
+4424
+4439
+4439
+4442
+24413
+]0;nick@W1643014: /mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[01;32mnick@W1643014[00m:[01;34m/mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[00m$ grep "DOWNLOAD" vsftpd.log | awk '{ print $14 }' | [K[K[K[C[C; }'[C }'S }'U }'M }'[1P }'[1P }'[1P }'[1P[C[1P}'[1@S[1@U[1@M[1@ [C[C[C[C[1@ [1@+[1@=[C[1@ [1@$[1@1[1@4[1@;[C[C[C[C[C[C[C[C[C[C[C[C 'E'N'D' '{' 'p'r'i'n't' 'S'U' [A]0;nick@W1643014: /mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[01;32mnick@W1643014[00m:[01;34m/mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CM'']'[1P'}'
+4356
+52722
+6583053
+2838
+2270
+2382
+2471
+2383
+2383
+4302
+4449
+4424
+4439
+4439
+4442
+24413
+6705766
+]0;nick@W1643014: /mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[01;32mnick@W1643014[00m:[01;34m/mnt/c/Users/NL048740/Google Drive/NCL 2019/PreSeason/LogAnalysis/vsftpd1[00m$ exit
+exit
+
+Script done on 2019-10-16 09:24:30-0500

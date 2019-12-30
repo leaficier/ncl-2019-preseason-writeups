@@ -1,0 +1,464 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Academic Torrents</title>
+
+	<meta charset="utf-8">
+	<meta property="og:site_name" content="Academic Torrents" />
+	<meta property="og:locale" content="en_US" />  
+	<meta property="og:type" content="article" />
+	<meta property="og:image" content="http://academictorrents.com/res/img/logo--1200x630.jpg" />
+      
+<!-- 	<link href="/res/jquery/jquery-ui.min.css" rel="stylesheet"> -->
+<!-- 	<script src="/res/jquery/jquery-2.1.0.min.js"></script> -->
+<!-- 	<script src="/res/jquery/jquery-ui.min.js"></script> -->
+<!-- 	<script src="/res/jquery/jquery-ui-i18n.min.js"></script> -->
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- Bootstrap core CSS -->
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+<!-- 	<link href="/res/bootstrap3.2/bootstrap.min.css" rel="stylesheet"> -->
+<!-- 	<link href="/res/bootstrap3.2/bootstrap-theme.min.css" rel="stylesheet"> -->
+<!-- 	<script src="/res/bootstrap3.2/bootstrap.min.js"></script> -->
+	
+<script>
+// Removing this code will be considered a violation of our policies
+$(function(){
+
+	if (window.CloudflareApps || location.hostname != atob("YWNhZGVtaWN0b3JyZW50cy5jb20=")){
+		console.log("Site is not authentic")
+		$("#notlivewarning").show();
+		$("#notlivewarninglink").attr("href",atob("aHR0cDovL2FjYWRlbWljdG9ycmVudHMuY29t"));
+		$("#login-checking-text").text("Please visit live version of the site to log in");
+		
+	}else{
+
+		$("#login-checking").hide();
+		$("#login-form").show();
+	}
+});
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46214407-1', 'academictorrents.com');
+  ga('send', 'pageview');
+</script>
+	
+</head>
+<body data-spy="scroll" data-target="#scroll-content">
+
+<div id="notlivewarning" style="margin-bottom:0px;display:none;" class="alert alert-danger" role="alert">
+<center><a id="notlivewarninglink" style="color:black;font-size:15pt">This is a cached version of the website. Click here to view the live site.</span></center>
+</div>
+
+
+<nav class="navbar navbar-default navbar-inverse" role="navigation" style="margin:0px">
+
+<div class="navbar-header">
+  <a class="navbar-brand" href="http://academictorrents.com/">Academic Torrents</a>
+</div>
+
+<ul class="nav navbar-nav" style="margin:0px;">
+<!--  <li>
+<a class="" href='index.php'><span class="glyphicon glyphicon-home"></span> Home</a>
+-->
+<li>
+
+<a class="dropdown-toggle" href='#' data-toggle="dropdown"><span class="glyphicon glyphicon-search"></span> Browse <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+        
+          <li><a href="/browse.php?cat=6" role="button"><span class="glyphicon glyphicon-th-list"></span> Datasets</a></li>
+          <li><a href="/browse.php?cat=5" role="button"><span class="glyphicon glyphicon-book"></span> Papers</a></li>
+          <li><a href="/browse.php?cat=7" role="button"><span class="glyphicon glyphicon-facetime-video"></span> Courses</a></li>
+          <li><a href="/collections.php" role="button"><span class="glyphicon glyphicon-briefcase"></span> Collections</a></li>
+        </ul>
+<li>
+<a class="" href='/upload.php'><span class="glyphicon glyphicon-cloud-upload"></span> Upload</a>
+
+<li>
+<a class="" href='/about.php'><span class="glyphicon glyphicon-globe"></span> About</a>
+
+<li>
+<a class="" href='/give'><span class="glyphicon glyphicon-heart" style="color:red"></span> Donate</a>
+
+
+<li>
+<a class="" href='/login.php'><span class="glyphicon glyphicon-user"></span> Login</a>
+
+
+</ul>
+
+
+<form class="navbar-form navbar-right" role="search" style="margin-right:0px;margin-left:0px;"  method="get" action="/browse.php">
+
+  <div class="form-group text-right">
+    <input type="text" class="form-control" placeholder="paper, author, or dataset" name="search" style="min-width: 200px;" />
+
+  	<button type="submit" class="btn btn-primary">Search</button>
+
+  </div>
+
+</form>
+
+</nav>
+
+
+
+
+<div class="row">
+<div class="col-sm-7">
+<center>
+<p>
+<form method="get" action="browse.php" >
+
+<div class="input-group">
+<input class="form-control" type="text" name="search" placeholder="Search here" style="width:200px" value="">
+
+<div class="btn-group" >
+<button type='button' class='btn btn-default'><a href=browse.php?cat=5>Paper</a> <input name=c5 type="checkbox" value=1></button>
+<button type='button' class='btn btn-default'><a href=browse.php?cat=6>Dataset</a> <input name=c6 type="checkbox" value=1></button>
+<button type='button' class='btn btn-default'><a href=browse.php?cat=7>Course</a> <input name=c7 type="checkbox" value=1></button>
+<!-- <button type='button' class='btn btn-default'><a href=browse.php?all=1>Everything</a></button> -->
+<button style="padding-left: 10px;" type='submit' class="btn btn-info">Go</button>
+</div>
+
+</div>
+</form>
+</p>
+</center>
+</div>
+<div class="col-sm-5">
+<center>
+<!--<div class="" >
+     <script type="text/javascript">
+       	amzn_assoc_ad_type = "banner";
+	amzn_assoc_marketplace = "amazon";
+	amzn_assoc_region = "US";
+	amzn_assoc_placement = "assoc_banner_placement_default";
+	amzn_assoc_banner_type = "ez";
+	amzn_assoc_p = "13";
+	amzn_assoc_width = "468";
+	amzn_assoc_height = "60";
+	amzn_assoc_tracking_id = "academictorre-20";
+	amzn_assoc_linkid = "ae512e8b70b1f144a78d3598c5aaeea2";
+     </script>
+     <script src="//z-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1"></script>
+    </div>
+    -->
+
+<div style="width:320px;height:50px;overflow:none;">
+<div style="position: absolute;z-index: -100;width:320px;">
+
+<h5>
+<a href="/give">Support Academic Torrents!</a><br>Disable your ad-blocker!
+</h5>
+</div>
+<script type="text/javascript">
+    google_ad_client = "ca-pub-2068283315745938";
+    google_ad_slot = "6467570043";
+    google_ad_width = 320;
+    google_ad_height = 50;
+</script>
+<!-- AT small banner -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+</center>
+</div>
+</div>
+
+
+<table class="table" style="font-size: small">
+<tr>
+
+<td class='colhead' align='center' ><a href='browse.php?sort_field=cat_name&amp;sort_dir=DESC'><span style='display: block;white-space: nowrap;'>Type</span></a></td><td class='colhead' align='center' style='width:100%'><a href='browse.php?sort_field=name&amp;sort_dir=DESC'><span style='display: block;white-space: nowrap;'>Name</span></a></td><!-- <td class="colhead" align="center">DL</td> -->
+<td class='colhead' align='center' ><a href='browse.php?sort_field=numfiles&amp;sort_dir=DESC'><span style='display: block;white-space: nowrap;'>Files</span></a></td><td class='colhead' align='center' ><a href='browse.php?sort_field=added&amp;sort_dir=DESC'><span style='display: block;white-space: nowrap;'>Added</span></a></td><td class='colhead' align='center' ><a href='browse.php?sort_field=size&amp;sort_dir=DESC'><span style='display: block;white-space: nowrap;'>Size</span></a></td><td class='colhead' align='center' ><a href='browse.php?sort_field=times_completed&amp;sort_dir=DESC'><span style='display: block;white-space: nowrap;'>DLs</span></a></td><td class='colhead' align='center' ><a href='browse.php?sort_field=seeders&amp;sort_dir=DESC'><span style='display: block;white-space: nowrap;'><span class="glyphicon glyphicon-cloud-upload"></span></span></a></td><td class='colhead' align='center' ><a href='browse.php?sort_field=leechers&amp;sort_dir=ASC'><span style='display: block;white-space: nowrap;'><span class="glyphicon glyphicon-cloud-download"></span><span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span></span></a></td>
+
+
+<tr>
+<td align=center><a href="/browse.php?cat=7"><span class='glyphicon glyphicon-facetime-video'></span></a></td>
+<td align=left><a href="/details/5e84be34f69b1a313f6dcb51667edf238d5d4412"><b>UC Berkeley Computer Science Courses (Full Collection)</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/5e84be34f69b1a313f6dcb51667edf238d5d4412/tech&amp;hit=1&amp;filelist=1">1979</a></b></td>
+<td align=center><nobr>2017-03-10</nobr></td>
+<td align=center>446.28GB</td>
+<td align=center>265<td align="center" nowrap><b><a class="green" href="/details/5e84be34f69b1a313f6dcb51667edf238d5d4412/tech&amp;dllist=1">7</a></b></td>
+<td align="center"><b><a class="green" href="/details/5e84be34f69b1a313f6dcb51667edf238d5d4412/tech&amp;dllist=1">9</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=7"><span class='glyphicon glyphicon-facetime-video'></span></a></td>
+<td align=left><a href="/details/8165e591be4b54c2bc93b1e54c4374d42dcdd9f8"><b>10-715 Advanced Introduction to Machine Learning - CMU - Fall 2015</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/8165e591be4b54c2bc93b1e54c4374d42dcdd9f8/tech&amp;hit=1&amp;filelist=1">34</a></b></td>
+<td align=center><nobr>2016-09-10</nobr></td>
+<td align=center>111.18GB</td>
+<td align=center>307<td align="center" nowrap><b><a class="green" href="/details/8165e591be4b54c2bc93b1e54c4374d42dcdd9f8/tech&amp;dllist=1">11+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="green" href="/details/8165e591be4b54c2bc93b1e54c4374d42dcdd9f8/tech&amp;dllist=1">4</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=6"><span class='glyphicon glyphicon-th-list'></span></a></td>
+<td align=left><a href="/details/a306397ccf9c2ead27155983c254227c0fd938e2"><b>ImageNet LSVRC 2012 Training Set (Object Detection)</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/a306397ccf9c2ead27155983c254227c0fd938e2/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2015-10-16</nobr></td>
+<td align=center>147.90GB</td>
+<td align=center>1,133<td align="center" nowrap><b><a class="green" href="/details/a306397ccf9c2ead27155983c254227c0fd938e2/tech&amp;dllist=1">28+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="green" href="/details/a306397ccf9c2ead27155983c254227c0fd938e2/tech&amp;dllist=1">3</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=6"><span class='glyphicon glyphicon-th-list'></span></a></td>
+<td align=left><a href="/details/564a77c1e1119da199ff32622a1609431b9f1c47"><b>Imagenet Full (Fall 2011 release)</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/564a77c1e1119da199ff32622a1609431b9f1c47/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2015-10-16</nobr></td>
+<td align=center>1.31TB</td>
+<td align=center>243<td align="center" nowrap><b><a class="green" href="/details/564a77c1e1119da199ff32622a1609431b9f1c47/tech&amp;dllist=1">4+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="green" href="/details/564a77c1e1119da199ff32622a1609431b9f1c47/tech&amp;dllist=1">3</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/5e2afb83a2f37394fffd95a78406f80a81058116"><b>Draft-of-the-Climate-Science-Special-Report.pdf</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/5e2afb83a2f37394fffd95a78406f80a81058116/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2017-08-08</nobr></td>
+<td align=center>53.67MB</td>
+<td align=center>0<td align="center" nowrap><b><a class="red" href="/details/5e2afb83a2f37394fffd95a78406f80a81058116/tech&amp;dllist=1">0</a></b></td>
+<td align="center"><b><a class="green" href="/details/5e2afb83a2f37394fffd95a78406f80a81058116/tech&amp;dllist=1">3</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=6"><span class='glyphicon glyphicon-th-list'></span></a></td>
+<td align=left><a href="/details/f993c01f3c268b5d57219a38f8ec73ee7524421a"><b>MS Common Objects in Context (COCO2014)</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/f993c01f3c268b5d57219a38f8ec73ee7524421a/tech&amp;hit=1&amp;filelist=1">3</a></b></td>
+<td align=center><nobr>2015-10-09</nobr></td>
+<td align=center>26.82GB</td>
+<td align=center>201<td align="center" nowrap><b><a class="green" href="/details/f993c01f3c268b5d57219a38f8ec73ee7524421a/tech&amp;dllist=1">9+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="green" href="/details/f993c01f3c268b5d57219a38f8ec73ee7524421a/tech&amp;dllist=1">2</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=6"><span class='glyphicon glyphicon-th-list'></span></a></td>
+<td align=left><a href="/details/9daa9e3daba301ba8b17faac5c05fde0266126d0"><b>LUNA16-subset5</b></a>
+<span class=pull-right></span></td>
+<td align="center"><b><a href="/details/9daa9e3daba301ba8b17faac5c05fde0266126d0/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2016-01-18</nobr></td>
+<td align=center>6.61GB</td>
+<td align=center>668<td align="center" nowrap><b><a class="green" href="/details/9daa9e3daba301ba8b17faac5c05fde0266126d0/tech&amp;dllist=1">20+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="green" href="/details/9daa9e3daba301ba8b17faac5c05fde0266126d0/tech&amp;dllist=1">2</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=6"><span class='glyphicon glyphicon-th-list'></span></a></td>
+<td align=left><a href="/details/22955ce4dbc3c73c254ba6196363667c0352d438"><b>Functional Map of the World - full - trainval v1.0.0</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/22955ce4dbc3c73c254ba6196363667c0352d438/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2017-10-10</nobr></td>
+<td align=center>2.69TB</td>
+<td align=center>6<td align="center" nowrap><b><a class="green" href="/details/22955ce4dbc3c73c254ba6196363667c0352d438/tech&amp;dllist=1">2</a></b></td>
+<td align="center"><b><a class="green" href="/details/22955ce4dbc3c73c254ba6196363667c0352d438/tech&amp;dllist=1">2</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/7f9babce18d0bad43b0e3d56cd52dd8bce9b7dd1"><b>Tracking-Learning-Detection</b></a>
+<span class=pull-right></span></td>
+<td align="center"><b><a href="/details/7f9babce18d0bad43b0e3d56cd52dd8bce9b7dd1/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2016-03-30</nobr></td>
+<td align=center>2.80MB</td>
+<td align=center>50<td align="center" nowrap><b><a class="green" href="/details/7f9babce18d0bad43b0e3d56cd52dd8bce9b7dd1/tech&amp;dllist=1">4+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="green" href="/details/7f9babce18d0bad43b0e3d56cd52dd8bce9b7dd1/tech&amp;dllist=1">2</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/aec97f8374cfa5b8bce86cd542870fe849e1afb5"><b>A Brief Review of Nature-Inspired Algorithms for Optimization</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/aec97f8374cfa5b8bce86cd542870fe849e1afb5/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2017-01-09</nobr></td>
+<td align=center>161.54kB</td>
+<td align=center>360<td align="center" nowrap><b><a class="green" href="/details/aec97f8374cfa5b8bce86cd542870fe849e1afb5/tech&amp;dllist=1">12+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="green" href="/details/aec97f8374cfa5b8bce86cd542870fe849e1afb5/tech&amp;dllist=1">2</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/5c7d429c9991bf87fea35feef68889eada4a3425"><b>Social Media Analyzing.ova</b></a>
+<span class=pull-right></span></td>
+<td align="center"><b><a href="/details/5c7d429c9991bf87fea35feef68889eada4a3425/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2017-03-11</nobr></td>
+<td align=center>15.41GB</td>
+<td align=center>32<td align="center" nowrap><b><a class="green" href="/details/5c7d429c9991bf87fea35feef68889eada4a3425/tech&amp;dllist=1">1</a></b></td>
+<td align="center"><b><a class="green" href="/details/5c7d429c9991bf87fea35feef68889eada4a3425/tech&amp;dllist=1">2</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=7"><span class='glyphicon glyphicon-facetime-video'></span></a></td>
+<td align=left><a href="/details/459e24d28a6abce04cc9fd6e9a148c86dcaac19c"><b>[Coursera] Automata (Stanford University) (automata)</b></a>
+<span class=pull-right></span></td>
+<td align="center"><b><a href="/details/459e24d28a6abce04cc9fd6e9a148c86dcaac19c/tech&amp;hit=1&amp;filelist=1">171</a></b></td>
+<td align=center><nobr>2017-03-05</nobr></td>
+<td align=center>876.35MB</td>
+<td align=center>415<td align="center" nowrap><b><a class="green" href="/details/459e24d28a6abce04cc9fd6e9a148c86dcaac19c/tech&amp;dllist=1">18</a></b></td>
+<td align="center"><b><a class="green" href="/details/459e24d28a6abce04cc9fd6e9a148c86dcaac19c/tech&amp;dllist=1">2</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=7"><span class='glyphicon glyphicon-facetime-video'></span></a></td>
+<td align=left><a href="/details/0cdba976d648fbe322133833323491ebf8b34340"><b>[Coursera] Machine Learning (University of Washington) (machlearning)</b></a>
+<span class=pull-right></span></td>
+<td align="center"><b><a href="/details/0cdba976d648fbe322133833323491ebf8b34340/tech&amp;hit=1&amp;filelist=1">115</a></b></td>
+<td align=center><nobr>2017-03-05</nobr></td>
+<td align=center>5.65GB</td>
+<td align=center>1,400<td align="center" nowrap><b><a class="green" href="/details/0cdba976d648fbe322133833323491ebf8b34340/tech&amp;dllist=1">39</a></b></td>
+<td align="center"><b><a class="green" href="/details/0cdba976d648fbe322133833323491ebf8b34340/tech&amp;dllist=1">2</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=7"><span class='glyphicon glyphicon-facetime-video'></span></a></td>
+<td align=left><a href="/details/e8b1f9c5bf555fe58bc73addb83457dd6da69630"><b>[Coursera] Machine Learning (Stanford University) (ml)</b></a>
+<span class=pull-right></span></td>
+<td align="center"><b><a href="/details/e8b1f9c5bf555fe58bc73addb83457dd6da69630/tech&amp;hit=1&amp;filelist=1">376</a></b></td>
+<td align=center><nobr>2017-03-05</nobr></td>
+<td align=center>1.59GB</td>
+<td align=center>3,969<td align="center" nowrap><b><a class="green" href="/details/e8b1f9c5bf555fe58bc73addb83457dd6da69630/tech&amp;dllist=1">80</a></b></td>
+<td align="center"><b><a class="green" href="/details/e8b1f9c5bf555fe58bc73addb83457dd6da69630/tech&amp;dllist=1">2</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=7"><span class='glyphicon glyphicon-facetime-video'></span></a></td>
+<td align=left><a href="/details/92644e4132e893c70c3e0ad9ac1d58bef554bd14"><b>Nuclear Engineering 101, 001 - Fall 2014 - UC Berkeley</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/92644e4132e893c70c3e0ad9ac1d58bef554bd14/tech&amp;hit=1&amp;filelist=1">29</a></b></td>
+<td align=center><nobr>2017-03-09</nobr></td>
+<td align=center>4.97GB</td>
+<td align=center>206<td align="center" nowrap><b><a class="green" href="/details/92644e4132e893c70c3e0ad9ac1d58bef554bd14/tech&amp;dllist=1">16</a></b></td>
+<td align="center"><b><a class="green" href="/details/92644e4132e893c70c3e0ad9ac1d58bef554bd14/tech&amp;dllist=1">2</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=7"><span class='glyphicon glyphicon-facetime-video'></span></a></td>
+<td align=left><a href="/details/52da574b6412862e199abeaea63e51bf8cea2140"><b>Introduction to Computer Science [CS50x] [Harvard] [2018]</b></a>
+<span class=pull-right></span></td>
+<td align="center"><b><a href="/details/52da574b6412862e199abeaea63e51bf8cea2140/tech&amp;hit=1&amp;filelist=1">192</a></b></td>
+<td align=center><nobr>2018-01-24</nobr></td>
+<td align=center>9.61GB</td>
+<td align=center>575<td align="center" nowrap><b><a class="green" href="/details/52da574b6412862e199abeaea63e51bf8cea2140/tech&amp;dllist=1">39</a></b></td>
+<td align="center"><b><a class="green" href="/details/52da574b6412862e199abeaea63e51bf8cea2140/tech&amp;dllist=1">2</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=7"><span class='glyphicon glyphicon-facetime-video'></span></a></td>
+<td align=left><a href="/details/af6745de427de294a32cfee3ceae5b8aba909500"><b>[Coursera] Analytic Combinatorics</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/af6745de427de294a32cfee3ceae5b8aba909500/tech&amp;hit=1&amp;filelist=1">56</a></b></td>
+<td align=center><nobr>2016-09-26</nobr></td>
+<td align=center>1.59GB</td>
+<td align=center>272<td align="center" nowrap><b><a class="green" href="/details/af6745de427de294a32cfee3ceae5b8aba909500/tech&amp;dllist=1">6</a></b></td>
+<td align="center"><b><a class="green" href="/details/af6745de427de294a32cfee3ceae5b8aba909500/tech&amp;dllist=1">2</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=6"><span class='glyphicon glyphicon-th-list'></span></a></td>
+<td align=left><a href="/details/517cc93da6740d759ff02a845795e839bbebeb67"><b>THEMIS Night IR 100m Global Mosaic</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/517cc93da6740d759ff02a845795e839bbebeb67/tech&amp;hit=1&amp;filelist=1">51</a></b></td>
+<td align=center><nobr>2013-12-21</nobr></td>
+<td align=center>37.95GB</td>
+<td align=center>15<td align="center" nowrap><b><a class="red" href="/details/517cc93da6740d759ff02a845795e839bbebeb67/tech&amp;dllist=1"><span title='This entry is stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="green" href="/details/517cc93da6740d759ff02a845795e839bbebeb67/tech&amp;dllist=1">1</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=6"><span class='glyphicon glyphicon-th-list'></span></a></td>
+<td align=left><a href="/details/7fafb101f9c7961f9b840daeb4af43039107ddef"><b>UCI Machine Learning Datasets 12/2013</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/7fafb101f9c7961f9b840daeb4af43039107ddef/tech&amp;hit=1&amp;filelist=1">211</a></b></td>
+<td align=center><nobr>2013-12-20</nobr></td>
+<td align=center>16.37GB</td>
+<td align=center>10,441<td align="center" nowrap><b><a class="green" href="/details/7fafb101f9c7961f9b840daeb4af43039107ddef/tech&amp;dllist=1">8+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="green" href="/details/7fafb101f9c7961f9b840daeb4af43039107ddef/tech&amp;dllist=1">1</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=6"><span class='glyphicon glyphicon-th-list'></span></a></td>
+<td align=left><a href="/details/d247b92fa7b606e0914367c0839365499dd20121"><b>freefield1010 - an open dataset for research on audio field recording archives</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/d247b92fa7b606e0914367c0839365499dd20121/tech&amp;hit=1&amp;filelist=1">30</a></b></td>
+<td align=center><nobr>2014-01-31</nobr></td>
+<td align=center>5.96GB</td>
+<td align=center>45<td align="center" nowrap><b><a class="red" href="/details/d247b92fa7b606e0914367c0839365499dd20121/tech&amp;dllist=1"><span title='This entry is stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="green" href="/details/d247b92fa7b606e0914367c0839365499dd20121/tech&amp;dllist=1">1</a></b></td>
+</tr>
+</table>
+
+<center>
+<p><ul class='pagination'><li class='disabled'><a href='#'><b>&lt;&lt;&nbsp;Prev</b></a></li>
+ <li class='active'><a href='#'><b>1&nbsp;-&nbsp;20</b></a></li>
+<li style='width:30px'><a href='browse.php?sort_field=leechers&amp;sort_dir=DESC&amp;page=1'><b>21&nbsp;-&nbsp;40</b></a></li>
+<li style='width:30px'><a href='browse.php?sort_field=leechers&amp;sort_dir=DESC&amp;page=2'><b>41&nbsp;-&nbsp;60</b></a></li>
+<li class='disabled'><a href='#'>...</a></li>
+<li style='width:30px'><a href='browse.php?sort_field=leechers&amp;sort_dir=DESC&amp;page=94'><b>1881&nbsp;-&nbsp;1900</b></a></li>
+<li style='width:30px'><a href='browse.php?sort_field=leechers&amp;sort_dir=DESC&amp;page=95'><b>1901&nbsp;-&nbsp;1920</b></a></li>
+<li style='width:30px'><a href='browse.php?sort_field=leechers&amp;sort_dir=DESC&amp;page=96'><b>1921&nbsp;-&nbsp;1927</b></a></li> <li><a href="browse.php?sort_field=leechers&amp;sort_dir=DESC&amp;page=1"><b>Next&nbsp;&gt;&gt;</b></a></li>
+</ul></p>
+</center>
+
+<center>
+<div style="width:320px;height:50px;overflow:none;">
+<div style="position: absolute;z-index: -100;width:320px;">
+
+<h5>
+<a href="/give">Support Academic Torrents!</a><br>Disable your ad-blocker!
+</h5>
+</div>
+<script type="text/javascript">
+    google_ad_client = "ca-pub-2068283315745938";
+    google_ad_slot = "6467570043";
+    google_ad_width = 320;
+    google_ad_height = 50;
+</script>
+<!-- AT small banner -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</center>
+
+
+</td></tr></table>
+</center>
+<hr>
+
+<style>
+#chat-link {
+	position: fixed;
+	right: 5px;
+	bottom: 10px;
+	background: #fff;
+	border: 1px solid #e0e0e0;
+	padding: 5px 15px 10px;
+	border-radius: 5px 0 0 5px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	color: #979faf
+}
+
+.glyphicon-envelope {
+	text-align: center;
+	line-height: 26px;
+	margin-right: 5px;
+	position: relative
+}
+</style>
+
+<script>
+document.write('<a href="https://github.com/AcademicTorrents/academictorrents.com-feedback/issues" id="chat-link" target="_blank"><i class="glyphicon glyphicon-envelope"></i>Send Feedback</a>')
+</script>
+
+<footer class="footer">
+	<center>
+		We are a community-maintained distributed repository for datasets and scientific knowledge <br>
+		<a href="/about.php">About</a> - <a href="/terms.php">Terms</a>
+		<br><br>
+	</center>
+</footer>
+</body>
+</html>

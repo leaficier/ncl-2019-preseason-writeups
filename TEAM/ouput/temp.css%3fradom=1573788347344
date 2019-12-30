@@ -1,0 +1,35 @@
+body.activityon {
+    background-color: #fff !important;
+}
+
+.activityon #headerwrapper #menu {
+	width: 1050px!important;
+    padding: 0px 30px 0px!important;
+    background-color: #001f51 !important;
+    opacity: .9;
+}
+
+.activityon #headerwrapper #menu.menu-fix-top{
+	width: 100% !important;
+}
+
+
+.activityon .mod-navbar .menu-list {
+    margin-left: -63px;
+}
+.activityon .menu-fix-top .menu-list {
+    margin-left: -93px;
+}
+
+/*导航选中太*/
+.activityon .mod-navbar .lavalamp-object,
+.activityon .mod-navbar .menu-list .current a {
+    background-color: #cf0000 !important;
+}
+
+/*导航去掉个性推荐*/
+#tab-login {
+    display:none !important;
+}
+
+

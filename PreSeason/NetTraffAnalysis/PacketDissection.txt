@@ -1,0 +1,10 @@
+Offsets 	0 			1 			2 			3	
+0 			(0100)(0101) 	(000000)(00) 	(0000000000111100)
+4 			(1010100110011010) 	(010)(0000000000000)
+8 			(01000000) 	(00000110) 	(0100111110010011)
+12 			(11000000.10101000.10000000.10000000)
+16 			(10011111.11001011.01100000.10011010)
+
+The way to solve this is to match the offset bits with the bits of the IPv4 header fields. My method was to wrap each IP field of bits in parentheses, 
+to make clear what field is what. For example, the first set of parenthesis lines up with the 4 bits of the 'version' field in an IPv4 header. Follow this 
+pattern with the remaining fields looking at what the amount of bits are for each field in the header. 

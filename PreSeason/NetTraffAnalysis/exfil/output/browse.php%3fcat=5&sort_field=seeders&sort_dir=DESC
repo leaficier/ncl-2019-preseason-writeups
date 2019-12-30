@@ -1,0 +1,464 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Academic Torrents</title>
+
+	<meta charset="utf-8">
+	<meta property="og:site_name" content="Academic Torrents" />
+	<meta property="og:locale" content="en_US" />  
+	<meta property="og:type" content="article" />
+	<meta property="og:image" content="http://academictorrents.com/res/img/logo--1200x630.jpg" />
+      
+<!-- 	<link href="/res/jquery/jquery-ui.min.css" rel="stylesheet"> -->
+<!-- 	<script src="/res/jquery/jquery-2.1.0.min.js"></script> -->
+<!-- 	<script src="/res/jquery/jquery-ui.min.js"></script> -->
+<!-- 	<script src="/res/jquery/jquery-ui-i18n.min.js"></script> -->
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- Bootstrap core CSS -->
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+<!-- 	<link href="/res/bootstrap3.2/bootstrap.min.css" rel="stylesheet"> -->
+<!-- 	<link href="/res/bootstrap3.2/bootstrap-theme.min.css" rel="stylesheet"> -->
+<!-- 	<script src="/res/bootstrap3.2/bootstrap.min.js"></script> -->
+	
+<script>
+// Removing this code will be considered a violation of our policies
+$(function(){
+
+	if (window.CloudflareApps || location.hostname != atob("YWNhZGVtaWN0b3JyZW50cy5jb20=")){
+		console.log("Site is not authentic")
+		$("#notlivewarning").show();
+		$("#notlivewarninglink").attr("href",atob("aHR0cDovL2FjYWRlbWljdG9ycmVudHMuY29t"));
+		$("#login-checking-text").text("Please visit live version of the site to log in");
+		
+	}else{
+
+		$("#login-checking").hide();
+		$("#login-form").show();
+	}
+});
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46214407-1', 'academictorrents.com');
+  ga('send', 'pageview');
+</script>
+	
+</head>
+<body data-spy="scroll" data-target="#scroll-content">
+
+<div id="notlivewarning" style="margin-bottom:0px;display:none;" class="alert alert-danger" role="alert">
+<center><a id="notlivewarninglink" style="color:black;font-size:15pt">This is a cached version of the website. Click here to view the live site.</span></center>
+</div>
+
+
+<nav class="navbar navbar-default navbar-inverse" role="navigation" style="margin:0px">
+
+<div class="navbar-header">
+  <a class="navbar-brand" href="http://academictorrents.com/">Academic Torrents</a>
+</div>
+
+<ul class="nav navbar-nav" style="margin:0px;">
+<!--  <li>
+<a class="" href='index.php'><span class="glyphicon glyphicon-home"></span> Home</a>
+-->
+<li>
+
+<a class="dropdown-toggle" href='#' data-toggle="dropdown"><span class="glyphicon glyphicon-search"></span> Browse <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+        
+          <li><a href="/browse.php?cat=6" role="button"><span class="glyphicon glyphicon-th-list"></span> Datasets</a></li>
+          <li><a href="/browse.php?cat=5" role="button"><span class="glyphicon glyphicon-book"></span> Papers</a></li>
+          <li><a href="/browse.php?cat=7" role="button"><span class="glyphicon glyphicon-facetime-video"></span> Courses</a></li>
+          <li><a href="/collections.php" role="button"><span class="glyphicon glyphicon-briefcase"></span> Collections</a></li>
+        </ul>
+<li>
+<a class="" href='/upload.php'><span class="glyphicon glyphicon-cloud-upload"></span> Upload</a>
+
+<li>
+<a class="" href='/about.php'><span class="glyphicon glyphicon-globe"></span> About</a>
+
+<li>
+<a class="" href='/give'><span class="glyphicon glyphicon-heart" style="color:red"></span> Donate</a>
+
+
+<li>
+<a class="" href='/login.php'><span class="glyphicon glyphicon-user"></span> Login</a>
+
+
+</ul>
+
+
+<form class="navbar-form navbar-right" role="search" style="margin-right:0px;margin-left:0px;"  method="get" action="/browse.php">
+
+  <div class="form-group text-right">
+    <input type="text" class="form-control" placeholder="paper, author, or dataset" name="search" style="min-width: 200px;" />
+
+  	<button type="submit" class="btn btn-primary">Search</button>
+
+  </div>
+
+</form>
+
+</nav>
+
+
+
+
+<div class="row">
+<div class="col-sm-7">
+<center>
+<p>
+<form method="get" action="browse.php" >
+
+<div class="input-group">
+<input class="form-control" type="text" name="search" placeholder="Search here" style="width:200px" value="">
+
+<div class="btn-group" >
+<button type='button' class='btn btn-default'><a href=browse.php?cat=5>Paper</a> <input name=c5 type="checkbox" checked value=1></button>
+<button type='button' class='btn btn-default'><a href=browse.php?cat=6>Dataset</a> <input name=c6 type="checkbox" value=1></button>
+<button type='button' class='btn btn-default'><a href=browse.php?cat=7>Course</a> <input name=c7 type="checkbox" value=1></button>
+<!-- <button type='button' class='btn btn-default'><a href=browse.php?all=1>Everything</a></button> -->
+<button style="padding-left: 10px;" type='submit' class="btn btn-info">Go</button>
+</div>
+
+</div>
+</form>
+</p>
+</center>
+</div>
+<div class="col-sm-5">
+<center>
+<!--<div class="" >
+     <script type="text/javascript">
+       	amzn_assoc_ad_type = "banner";
+	amzn_assoc_marketplace = "amazon";
+	amzn_assoc_region = "US";
+	amzn_assoc_placement = "assoc_banner_placement_default";
+	amzn_assoc_banner_type = "ez";
+	amzn_assoc_p = "13";
+	amzn_assoc_width = "468";
+	amzn_assoc_height = "60";
+	amzn_assoc_tracking_id = "academictorre-20";
+	amzn_assoc_linkid = "ae512e8b70b1f144a78d3598c5aaeea2";
+     </script>
+     <script src="//z-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1"></script>
+    </div>
+    -->
+
+<div style="width:320px;height:50px;overflow:none;">
+<div style="position: absolute;z-index: -100;width:320px;">
+
+<h5>
+<a href="/give">Support Academic Torrents!</a><br>Disable your ad-blocker!
+</h5>
+</div>
+<script type="text/javascript">
+    google_ad_client = "ca-pub-2068283315745938";
+    google_ad_slot = "6467570043";
+    google_ad_width = 320;
+    google_ad_height = 50;
+</script>
+<!-- AT small banner -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+</center>
+</div>
+</div>
+
+
+<table class="table" style="font-size: small">
+<tr>
+
+<td class='colhead' align='center' ><a href='browse.php?cat=5&amp;sort_field=cat_name&amp;sort_dir=DESC'><span style='display: block;white-space: nowrap;'>Type</span></a></td><td class='colhead' align='center' style='width:100%'><a href='browse.php?cat=5&amp;sort_field=name&amp;sort_dir=DESC'><span style='display: block;white-space: nowrap;'>Name</span></a></td><!-- <td class="colhead" align="center">DL</td> -->
+<td class='colhead' align='center' ><a href='browse.php?cat=5&amp;sort_field=numfiles&amp;sort_dir=DESC'><span style='display: block;white-space: nowrap;'>Files</span></a></td><td class='colhead' align='center' ><a href='browse.php?cat=5&amp;sort_field=added&amp;sort_dir=DESC'><span style='display: block;white-space: nowrap;'>Added</span></a></td><td class='colhead' align='center' ><a href='browse.php?cat=5&amp;sort_field=size&amp;sort_dir=DESC'><span style='display: block;white-space: nowrap;'>Size</span></a></td><td class='colhead' align='center' ><a href='browse.php?cat=5&amp;sort_field=times_completed&amp;sort_dir=DESC'><span style='display: block;white-space: nowrap;'>DLs</span></a></td><td class='colhead' align='center' ><a href='browse.php?cat=5&amp;sort_field=seeders&amp;sort_dir=ASC'><span style='display: block;white-space: nowrap;'><span class="glyphicon glyphicon-cloud-upload"></span><span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span></span></a></td><td class='colhead' align='center' ><a href='browse.php?cat=5&amp;sort_field=leechers&amp;sort_dir=DESC'><span style='display: block;white-space: nowrap;'><span class="glyphicon glyphicon-cloud-download"></span></span></a></td>
+
+
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/5ba4939a00a9b21629a0ad7d376898b768d997a3"><b>Scikit-learn: Machine Learning in Python</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/5ba4939a00a9b21629a0ad7d376898b768d997a3/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2014-04-28</nobr></td>
+<td align=center>42.31kB</td>
+<td align=center>1,879<td align="center" nowrap><b><a class="green" href="/details/5ba4939a00a9b21629a0ad7d376898b768d997a3/tech&amp;dllist=1">32+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="red" href="/details/5ba4939a00a9b21629a0ad7d376898b768d997a3/tech&amp;dllist=1">0</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/d430724be7ac00f4b5e7f0d956f8411ef9b67dbe"><b>Introducing R</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/d430724be7ac00f4b5e7f0d956f8411ef9b67dbe/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2014-02-04</nobr></td>
+<td align=center>820.99kB</td>
+<td align=center>2,530<td align="center" nowrap><b><a class="green" href="/details/d430724be7ac00f4b5e7f0d956f8411ef9b67dbe/tech&amp;dllist=1">21+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="red" href="/details/d430724be7ac00f4b5e7f0d956f8411ef9b67dbe/tech&amp;dllist=1">0</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/958e2487d2db5f41f9c056bb35cf547edf38528f"><b>An Introduction to Computer Networks</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/958e2487d2db5f41f9c056bb35cf547edf38528f/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2015-02-01</nobr></td>
+<td align=center>4.87MB</td>
+<td align=center>1,275<td align="center" nowrap><b><a class="green" href="/details/958e2487d2db5f41f9c056bb35cf547edf38528f/tech&amp;dllist=1">14+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="red" href="/details/958e2487d2db5f41f9c056bb35cf547edf38528f/tech&amp;dllist=1">0</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/aec97f8374cfa5b8bce86cd542870fe849e1afb5"><b>A Brief Review of Nature-Inspired Algorithms for Optimization</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/aec97f8374cfa5b8bce86cd542870fe849e1afb5/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2017-01-09</nobr></td>
+<td align=center>161.54kB</td>
+<td align=center>360<td align="center" nowrap><b><a class="green" href="/details/aec97f8374cfa5b8bce86cd542870fe849e1afb5/tech&amp;dllist=1">12+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="green" href="/details/aec97f8374cfa5b8bce86cd542870fe849e1afb5/tech&amp;dllist=1">2</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/daaa86689c42e78c4111b74984d5036a426f6cf6"><b>Analysis of the Cryptocurrency Marketplace</b></a>
+<span class=pull-right></span></td>
+<td align="center"><b><a href="/details/daaa86689c42e78c4111b74984d5036a426f6cf6/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2014-02-23</nobr></td>
+<td align=center>1.98MB</td>
+<td align=center>1,956<td align="center" nowrap><b><a class="green" href="/details/daaa86689c42e78c4111b74984d5036a426f6cf6/tech&amp;dllist=1">10+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="red" href="/details/daaa86689c42e78c4111b74984d5036a426f6cf6/tech&amp;dllist=1">0</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/7d6d7b7fdecaeb0652cfb9449d25976bf56adac4"><b>Think Bayes - Bayesian Statistics Made Simple</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/7d6d7b7fdecaeb0652cfb9449d25976bf56adac4/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2014-02-04</nobr></td>
+<td align=center>2.37MB</td>
+<td align=center>2,950<td align="center" nowrap><b><a class="green" href="/details/7d6d7b7fdecaeb0652cfb9449d25976bf56adac4/tech&amp;dllist=1">9+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="red" href="/details/7d6d7b7fdecaeb0652cfb9449d25976bf56adac4/tech&amp;dllist=1">0</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/646222e4236e52b96a18fe7ec068389d5d75c8fd"><b>Invent Your Own Computer Games with Python, 2nd Edition</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/646222e4236e52b96a18fe7ec068389d5d75c8fd/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2014-08-03</nobr></td>
+<td align=center>5.07MB</td>
+<td align=center>521<td align="center" nowrap><b><a class="green" href="/details/646222e4236e52b96a18fe7ec068389d5d75c8fd/tech&amp;dllist=1">8+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="red" href="/details/646222e4236e52b96a18fe7ec068389d5d75c8fd/tech&amp;dllist=1">0</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/6e839ebb0394250327729c7f5e3b000061c71bfe"><b>Design of a hydraulic dexterous manipulator for minimally invasive surgery</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/6e839ebb0394250327729c7f5e3b000061c71bfe/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2017-02-04</nobr></td>
+<td align=center>4.20MB</td>
+<td align=center>34<td align="center" nowrap><b><a class="green" href="/details/6e839ebb0394250327729c7f5e3b000061c71bfe/tech&amp;dllist=1">7+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="red" href="/details/6e839ebb0394250327729c7f5e3b000061c71bfe/tech&amp;dllist=1">0</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/4cdade8fa3c6d451441fda7ae19bb53537b6ee21"><b>A methodology for exploring, documenting, and improving humanitarian service learning in the university. </b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/4cdade8fa3c6d451441fda7ae19bb53537b6ee21/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2017-01-25</nobr></td>
+<td align=center>241.51kB</td>
+<td align=center>366<td align="center" nowrap><b><a class="green" href="/details/4cdade8fa3c6d451441fda7ae19bb53537b6ee21/tech&amp;dllist=1">7+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="red" href="/details/4cdade8fa3c6d451441fda7ae19bb53537b6ee21/tech&amp;dllist=1">0</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/78e7fe1bb1b432f24c4e0226a25d02c2a8ca60c2"><b>Orange: Data Mining Toolbox in Python</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/78e7fe1bb1b432f24c4e0226a25d02c2a8ca60c2/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2014-04-28</nobr></td>
+<td align=center>63.40kB</td>
+<td align=center>141<td align="center" nowrap><b><a class="green" href="/details/78e7fe1bb1b432f24c4e0226a25d02c2a8ca60c2/tech&amp;dllist=1">7+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="red" href="/details/78e7fe1bb1b432f24c4e0226a25d02c2a8ca60c2/tech&amp;dllist=1">0</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/5975549bc2e7cc159af7906844199fc8ac59c425"><b>Kernel Analysis of Deep Networks</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/5975549bc2e7cc159af7906844199fc8ac59c425/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2014-04-28</nobr></td>
+<td align=center>762.62kB</td>
+<td align=center>62<td align="center" nowrap><b><a class="green" href="/details/5975549bc2e7cc159af7906844199fc8ac59c425/tech&amp;dllist=1">7+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="red" href="/details/5975549bc2e7cc159af7906844199fc8ac59c425/tech&amp;dllist=1">0</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/d746df46e76fcfdb8e0b682a5e47ed1a776db7db"><b>Introduction to Theory of Computation</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/d746df46e76fcfdb8e0b682a5e47ed1a776db7db/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2014-03-30</nobr></td>
+<td align=center>1.29MB</td>
+<td align=center>2,451<td align="center" nowrap><b><a class="green" href="/details/d746df46e76fcfdb8e0b682a5e47ed1a776db7db/tech&amp;dllist=1">7+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="red" href="/details/d746df46e76fcfdb8e0b682a5e47ed1a776db7db/tech&amp;dllist=1">0</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/4cc072da6bd32eedfec13e235a22ea4054e50554"><b>Purely P2P Crypto-Currency With Finite Mini-Blockchain</b></a>
+<span class=pull-right></span></td>
+<td align="center"><b><a href="/details/4cc072da6bd32eedfec13e235a22ea4054e50554/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2014-02-23</nobr></td>
+<td align=center>208.37kB</td>
+<td align=center>127<td align="center" nowrap><b><a class="green" href="/details/4cc072da6bd32eedfec13e235a22ea4054e50554/tech&amp;dllist=1">7+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="red" href="/details/4cc072da6bd32eedfec13e235a22ea4054e50554/tech&amp;dllist=1">0</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/8c271f4d2e92a3449e2d1bde633cd49f64af888f"><b>Bitcoin: A Peer-to-Peer Electronic Cash System</b></a>
+<span class=pull-right></span></td>
+<td align="center"><b><a href="/details/8c271f4d2e92a3449e2d1bde633cd49f64af888f/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2014-02-18</nobr></td>
+<td align=center>184.29kB</td>
+<td align=center>491<td align="center" nowrap><b><a class="green" href="/details/8c271f4d2e92a3449e2d1bde633cd49f64af888f/tech&amp;dllist=1">7+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="red" href="/details/8c271f4d2e92a3449e2d1bde633cd49f64af888f/tech&amp;dllist=1">0</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/3a54c0b98d9ca3ae92f1991bc3847c62be0ea8fc"><b>Food Security: The Challenge of Feeding 9 Billion People</b></a>
+<span class=pull-right></span></td>
+<td align="center"><b><a href="/details/3a54c0b98d9ca3ae92f1991bc3847c62be0ea8fc/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2015-11-29</nobr></td>
+<td align=center>425.08kB</td>
+<td align=center>229<td align="center" nowrap><b><a class="green" href="/details/3a54c0b98d9ca3ae92f1991bc3847c62be0ea8fc/tech&amp;dllist=1">6+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="red" href="/details/3a54c0b98d9ca3ae92f1991bc3847c62be0ea8fc/tech&amp;dllist=1">0</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/dce77c0199e3a98f81caa7bd204f8efade63732a"><b>To introduce computer science in one day: The Throw platform</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/dce77c0199e3a98f81caa7bd204f8efade63732a/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2014-02-09</nobr></td>
+<td align=center>690.08kB</td>
+<td align=center>594<td align="center" nowrap><b><a class="green" href="/details/dce77c0199e3a98f81caa7bd204f8efade63732a/tech&amp;dllist=1">6+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="red" href="/details/dce77c0199e3a98f81caa7bd204f8efade63732a/tech&amp;dllist=1">0</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/0bc8878760a3105617da3fa9ba6b97cffad6c24f"><b>PPCoin: Peer-to-Peer Crypto-Currency with Proof-of-Stake</b></a>
+<span class=pull-right></span></td>
+<td align="center"><b><a href="/details/0bc8878760a3105617da3fa9ba6b97cffad6c24f/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2014-02-18</nobr></td>
+<td align=center>41.97kB</td>
+<td align=center>228<td align="center" nowrap><b><a class="green" href="/details/0bc8878760a3105617da3fa9ba6b97cffad6c24f/tech&amp;dllist=1">5+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="red" href="/details/0bc8878760a3105617da3fa9ba6b97cffad6c24f/tech&amp;dllist=1">0</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/28e4d28f5c7873118147b64625e85ce34ea50184"><b>The PDS Universal Planetary Coordinates (UPC) Database,  Mars DB (Single File)</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/28e4d28f5c7873118147b64625e85ce34ea50184/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2018-03-22</nobr></td>
+<td align=center>4.73GB</td>
+<td align=center>3<td align="center" nowrap><b><a class="green" href="/details/28e4d28f5c7873118147b64625e85ce34ea50184/tech&amp;dllist=1">4</a></b></td>
+<td align="center"><b><a class="red" href="/details/28e4d28f5c7873118147b64625e85ce34ea50184/tech&amp;dllist=1">0</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/7f9babce18d0bad43b0e3d56cd52dd8bce9b7dd1"><b>Tracking-Learning-Detection</b></a>
+<span class=pull-right></span></td>
+<td align="center"><b><a href="/details/7f9babce18d0bad43b0e3d56cd52dd8bce9b7dd1/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2016-03-30</nobr></td>
+<td align=center>2.80MB</td>
+<td align=center>50<td align="center" nowrap><b><a class="green" href="/details/7f9babce18d0bad43b0e3d56cd52dd8bce9b7dd1/tech&amp;dllist=1">4+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="green" href="/details/7f9babce18d0bad43b0e3d56cd52dd8bce9b7dd1/tech&amp;dllist=1">2</a></b></td>
+</tr>
+<tr>
+<td align=center><a href="/browse.php?cat=5"><span class='glyphicon glyphicon-book'></span></a></td>
+<td align=left><a href="/details/c03f42edc1ceb9f0d4a4fd259ef1ef0803aec192"><b>Why Does Unsupervised Pre-training Help Deep Learning?</b></a>
+<span class=pull-right><a class='eduicon' title="This user has a educational email address"><span class="glyphicon glyphicon-education"></span></a> </span></td>
+<td align="center"><b><a href="/details/c03f42edc1ceb9f0d4a4fd259ef1ef0803aec192/tech&amp;hit=1&amp;filelist=1">1</a></b></td>
+<td align=center><nobr>2014-04-28</nobr></td>
+<td align=center>1.29MB</td>
+<td align=center>90<td align="center" nowrap><b><a class="green" href="/details/c03f42edc1ceb9f0d4a4fd259ef1ef0803aec192/tech&amp;dllist=1">4+<span title='This entry is also stored on web servers' class='glyphicon glyphicon-globe' aria-hidden='true'></span></a></b></td>
+<td align="center"><b><a class="red" href="/details/c03f42edc1ceb9f0d4a4fd259ef1ef0803aec192/tech&amp;dllist=1">0</a></b></td>
+</tr>
+</table>
+
+<center>
+<p><ul class='pagination'><li class='disabled'><a href='#'><b>&lt;&lt;&nbsp;Prev</b></a></li>
+ <li class='active'><a href='#'><b>1&nbsp;-&nbsp;20</b></a></li>
+<li style='width:30px'><a href='browse.php?cat=5&amp;sort_field=seeders&amp;sort_dir=DESC&amp;page=1'><b>21&nbsp;-&nbsp;40</b></a></li>
+<li style='width:30px'><a href='browse.php?cat=5&amp;sort_field=seeders&amp;sort_dir=DESC&amp;page=2'><b>41&nbsp;-&nbsp;60</b></a></li>
+<li class='disabled'><a href='#'>...</a></li>
+<li style='width:30px'><a href='browse.php?cat=5&amp;sort_field=seeders&amp;sort_dir=DESC&amp;page=68'><b>1361&nbsp;-&nbsp;1380</b></a></li>
+<li style='width:30px'><a href='browse.php?cat=5&amp;sort_field=seeders&amp;sort_dir=DESC&amp;page=69'><b>1381&nbsp;-&nbsp;1400</b></a></li>
+<li style='width:30px'><a href='browse.php?cat=5&amp;sort_field=seeders&amp;sort_dir=DESC&amp;page=70'><b>1401&nbsp;-&nbsp;1402</b></a></li> <li><a href="browse.php?cat=5&amp;sort_field=seeders&amp;sort_dir=DESC&amp;page=1"><b>Next&nbsp;&gt;&gt;</b></a></li>
+</ul></p>
+</center>
+
+<center>
+<div style="width:320px;height:50px;overflow:none;">
+<div style="position: absolute;z-index: -100;width:320px;">
+
+<h5>
+<a href="/give">Support Academic Torrents!</a><br>Disable your ad-blocker!
+</h5>
+</div>
+<script type="text/javascript">
+    google_ad_client = "ca-pub-2068283315745938";
+    google_ad_slot = "6467570043";
+    google_ad_width = 320;
+    google_ad_height = 50;
+</script>
+<!-- AT small banner -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</center>
+
+
+</td></tr></table>
+</center>
+<hr>
+
+<style>
+#chat-link {
+	position: fixed;
+	right: 5px;
+	bottom: 10px;
+	background: #fff;
+	border: 1px solid #e0e0e0;
+	padding: 5px 15px 10px;
+	border-radius: 5px 0 0 5px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	color: #979faf
+}
+
+.glyphicon-envelope {
+	text-align: center;
+	line-height: 26px;
+	margin-right: 5px;
+	position: relative
+}
+</style>
+
+<script>
+document.write('<a href="https://github.com/AcademicTorrents/academictorrents.com-feedback/issues" id="chat-link" target="_blank"><i class="glyphicon glyphicon-envelope"></i>Send Feedback</a>')
+</script>
+
+<footer class="footer">
+	<center>
+		We are a community-maintained distributed repository for datasets and scientific knowledge <br>
+		<a href="/about.php">About</a> - <a href="/terms.php">Terms</a>
+		<br><br>
+	</center>
+</footer>
+</body>
+</html>

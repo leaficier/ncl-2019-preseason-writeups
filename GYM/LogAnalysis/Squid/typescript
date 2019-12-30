@@ -1,0 +1,262 @@
+Script started on 2019-10-15 15:43:07-0500
+]0;nick@W1643014: /mnt/c/Users/NL048740/Google Drive/NCL 2019/LogAnalysis/Squid[01;32mnick@W1643014[00m:[01;34m/mnt/c/Users/NL048740/Google Drive/NCL 2019/LogAnalysis/Squid[00m$ cat w[Ksquid_access.log | awk '[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Khead squid_access.log 
+1286536308.779    180 192.168.0.224 TCP_MISS/200 411 GET http://liveupdate.symantecliveupdate.com/minitri.flg - DIRECT/125.23.216.203 text/plain
+1286536308.910     37 192.168.0.224 TCP_MISS/200 4083 GET http://liveupdate.symantecliveupdate.com/streaming/norton$202009$20streaming$20virus$20definitions_1.0_symalllanguages_livetri.zip - DIRECT/125.23.216.203 application/zip
+1286536309.450    917 192.168.0.227 TCP_MISS/200 20670 GET http://www.youtube.com/watch? - DIRECT/209.85.231.136 text/html
+1286536309.549    172 192.168.0.227 TCP_MISS/204 294 GET http://v15.lscache3.c.youtube.com/generate_204? - DIRECT/122.160.120.150 text/html
+1286536309.586    921 192.168.0.68 TCP_MISS/200 507 POST http://rcv-srv37.inplay.tubemogul.co...eiver/services - DIRECT/174.129.41.128 application/xml
+1286536309.608    829 192.168.0.68 TCP_MISS/200 507 POST http://rcv-srv37.inplay.tubemogul.co...eiver/services - DIRECT/174.129.41.128 application/xml
+1286536309.660    785 192.168.0.68 TCP_MISS/200 507 POST http://rcv-srv37.inplay.tubemogul.co...eiver/services - DIRECT/174.129.41.128 application/xml
+1286536309.684    808 192.168.0.68 TCP_MISS/200 507 POST http://rcv-srv37.inplay.tubemogul.co...eiver/services - DIRECT/174.129.41.128 application/xml
+1286536309.775    195 192.168.0.227 TCP_MISS/200 4120 GET http://i4.ytimg.com/vi/gTHZnIAzmdY/default.jpg - DIRECT/209.85.153.118 image/jpeg
+1286536309.795    215 192.168.0.227 TCP_MISS/200 5331 GET http://i2.ytimg.com/vi/-jBxVLD4fzg/default.jpg - DIRECT/209.85.153.118 image/jpeg
+]0;nick@W1643014: /mnt/c/Users/NL048740/Google Drive/NCL 2019/LogAnalysis/Squid[01;32mnick@W1643014[00m:[01;34m/mnt/c/Users/NL048740/Google Drive/NCL 2019/LogAnalysis/Squid[00m$ cat squid_access.log | aws [K[Kk '}[K{}[C'p}'r}'i}'n}'t}' }'$}'2}'[C[C " [K[K| sort -[K
+1003
+1016
+1366
+17
+172
+180
+195
+215
+221
+234
+2400
+37
+3806
+3833
+3850
+3878
+41762
+448
+449
+451
+452
+454
+457
+459
+461
+463
+469
+475
+475
+477
+477
+482
+486
+495
+5
+533
+583
+625
+666
+720
+723
+723
+724
+726
+728
+729
+73
+731
+732
+733
+735
+737
+737
+742
+746
+746
+747
+748
+748
+749
+749
+750
+752
+753
+754
+754
+754
+755
+755
+756
+756
+757
+761
+763
+765
+766
+768
+768
+771
+776
+777
+777
+779
+780
+780
+780
+784
+784
+785
+787
+791
+794
+795
+798
+798
+800
+800
+800
+800
+808
+808
+810
+812
+819
+826
+829
+832
+851
+917
+917
+921
+935
+942
+]0;nick@W1643014: /mnt/c/Users/NL048740/Google Drive/NCL 2019/LogAnalysis/Squid[01;32mnick@W1643014[00m:[01;34m/mnt/c/Users/NL048740/Google Drive/NCL 2019/LogAnalysis/Squid[00m$ cat squid_access.log | awk '{print $2}' | sort -n
+5
+17
+37
+73
+172
+180
+195
+215
+221
+234
+448
+449
+451
+452
+454
+457
+459
+461
+463
+469
+475
+475
+477
+477
+482
+486
+495
+533
+583
+625
+666
+720
+723
+723
+724
+726
+728
+729
+731
+732
+733
+735
+737
+737
+742
+746
+746
+747
+748
+748
+749
+749
+750
+752
+753
+754
+754
+754
+755
+755
+756
+756
+757
+761
+763
+765
+766
+768
+768
+771
+776
+777
+777
+779
+780
+780
+780
+784
+784
+785
+787
+791
+794
+795
+798
+798
+800
+800
+800
+800
+808
+808
+810
+812
+819
+826
+829
+832
+851
+917
+917
+921
+935
+942
+1003
+1016
+1366
+2400
+3806
+3833
+3850
+3878
+41762
+]0;nick@W1643014: /mnt/c/Users/NL048740/Google Drive/NCL 2019/LogAnalysis/Squid[01;32mnick@W1643014[00m:[01;34m/mnt/c/Users/NL048740/Google Drive/NCL 2019/LogAnalysis/Squid[00m$ claer[K[K[Kear
+[3J[H[2J]0;nick@W1643014: /mnt/c/Users/NL048740/Google Drive/NCL 2019/LogAnalysis/Squid[01;32mnick@W1643014[00m:[01;34m/mnt/c/Users/NL048740/Google Drive/NCL 2019/LogAnalysis/Squid[00m$ head squid_access.log 
+1286536308.779    180 192.168.0.224 TCP_MISS/200 411 GET http://liveupdate.symantecliveupdate.com/minitri.flg - DIRECT/125.23.216.203 text/plain
+1286536308.910     37 192.168.0.224 TCP_MISS/200 4083 GET http://liveupdate.symantecliveupdate.com/streaming/norton$202009$20streaming$20virus$20definitions_1.0_symalllanguages_livetri.zip - DIRECT/125.23.216.203 application/zip
+1286536309.450    917 192.168.0.227 TCP_MISS/200 20670 GET http://www.youtube.com/watch? - DIRECT/209.85.231.136 text/html
+1286536309.549    172 192.168.0.227 TCP_MISS/204 294 GET http://v15.lscache3.c.youtube.com/generate_204? - DIRECT/122.160.120.150 text/html
+1286536309.586    921 192.168.0.68 TCP_MISS/200 507 POST http://rcv-srv37.inplay.tubemogul.co...eiver/services - DIRECT/174.129.41.128 application/xml
+1286536309.608    829 192.168.0.68 TCP_MISS/200 507 POST http://rcv-srv37.inplay.tubemogul.co...eiver/services - DIRECT/174.129.41.128 application/xml
+1286536309.660    785 192.168.0.68 TCP_MISS/200 507 POST http://rcv-srv37.inplay.tubemogul.co...eiver/services - DIRECT/174.129.41.128 application/xml
+1286536309.684    808 192.168.0.68 TCP_MISS/200 507 POST http://rcv-srv37.inplay.tubemogul.co...eiver/services - DIRECT/174.129.41.128 application/xml
+1286536309.775    195 192.168.0.227 TCP_MISS/200 4120 GET http://i4.ytimg.com/vi/gTHZnIAzmdY/default.jpg - DIRECT/209.85.153.118 image/jpeg
+1286536309.795    215 192.168.0.227 TCP_MISS/200 5331 GET http://i2.ytimg.com/vi/-jBxVLD4fzg/default.jpg - DIRECT/209.85.153.118 image/jpeg
+]0;nick@W1643014: /mnt/c/Users/NL048740/Google Drive/NCL 2019/LogAnalysis/Squid[01;32mnick@W1643014[00m:[01;34m/mnt/c/Users/NL048740/Google Drive/NCL 2019/LogAnalysis/Squid[00m$ head squid_access.log clear[Kat squid_access.log | awk '{print $2}' | sort -n[1P[1@6[C[C[C[C[C[C[C[C[C[C[C[C[K[K| wc[K[Kuniq -c
+     35 GET
+     78 POST
+]0;nick@W1643014: /mnt/c/Users/NL048740/Google Drive/NCL 2019/LogAnalysis/Squid[01;32mnick@W1643014[00m:[01;34m/mnt/c/Users/NL048740/Google Drive/NCL 2019/LogAnalysis/Squid[00m$ cat squid_access.log | awk '{print $6}' | sort | uniq -c[Kgrep "192.168.0.224" squid_access.log 
+1286536308.779    180 [01;31m[K192.168.0.224[m[K TCP_MISS/200 411 GET http://liveupdate.symantecliveupdate.com/minitri.flg - DIRECT/125.23.216.203 text/plain
+1286536308.910     37 [01;31m[K192.168.0.224[m[K TCP_MISS/200 4083 GET http://liveupdate.symantecliveupdate.com/streaming/norton$202009$20streaming$20virus$20definitions_1.0_symalllanguages_livetri.zip - DIRECT/125.23.216.203 application/zip
+]0;nick@W1643014: /mnt/c/Users/NL048740/Google Drive/NCL 2019/LogAnalysis/Squid[01;32mnick@W1643014[00m:[01;34m/mnt/c/Users/NL048740/Google Drive/NCL 2019/LogAnalysis/Squid[00m$ exit
+exit
+
+Script done on 2019-10-15 15:47:07-0500

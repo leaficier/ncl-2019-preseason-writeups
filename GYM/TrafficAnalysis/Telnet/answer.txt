@@ -1,0 +1,11 @@
+........... ..!.."..'.....#..... ..#..'........!.."..... .....#.....'.............P...... .38400,38400....#.Sandbox:0.0....'..DISPLAY.Sandbox:0.0......xterm..............login: tteesstt
+.
+Password: capture
+.
+$ uunnaammee  --aa
+.
+Linux cm4116 2.6.30.2-uc0 #3 Tue Feb 22 00:57:18 EST 2011 armv4tl unknown
+$ ...
+$ eexxiitt
+.
+logout
